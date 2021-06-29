@@ -85,7 +85,19 @@ public class CinemaManagerTest {
         assertArrayEquals(actual,expected);
 
     }
+    @Test
+    public void getMoreCinema (){
+        manager.add(one);
+        manager.add(two);
+        manager.add(three);
+        manager.add(four);
+        manager.add(five);
 
+        Cinema [] actual = manager.getMovie();
+        Cinema[] expected = new Cinema[] {ten,nine,eight,seven,six,five,four,three,two,one};
+
+        assertArrayEquals(actual,expected);
+    }
 }
 
 

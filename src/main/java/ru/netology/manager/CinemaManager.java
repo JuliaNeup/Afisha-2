@@ -2,8 +2,12 @@ package ru.netology.manager;
 
 import lombok.NoArgsConstructor;
 import ru.netology.domain.Cinema;
+import ru.netology.domain.PurchaseItem;
 
 import java.util.concurrent.Callable;
+
+import static java.util.Objects.nonNull;
+
 @NoArgsConstructor
 public class CinemaManager {
     private Cinema[] films =new Cinema[0];
@@ -39,15 +43,15 @@ public class CinemaManager {
         return result;
     }
 
+
     public Cinema[] getMovie() {
         int count = filmsLimit;
         if (films.length < count) {
             count = films.length;
         }
-
         Cinema[] result = new Cinema[count];
         for (int i = 0; i < result.length; i++) {
-            int index = films.length - i - 1;
+            int index = count - i - 1;
             result[i] = films[index];
         }
         return result;
