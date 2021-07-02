@@ -2,7 +2,7 @@ package ru.netology.manager;
 
 import lombok.NoArgsConstructor;
 import ru.netology.domain.Cinema;
-import ru.netology.domain.PurchaseItem;
+
 
 import java.util.concurrent.Callable;
 
